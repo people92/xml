@@ -1,6 +1,8 @@
 package com.server.people.xml.parsing.util;
 
 
+import org.json.JSONObject;
+import org.json.XML;
 import org.springframework.util.StringUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -34,6 +36,14 @@ public class XmlUtils {
         marshaller.marshal(obj, writer);
 
         return writer.toString();
+    }
+
+    public static String toJson(String xml) throws Exception {
+
+        JSONObject jsonObject = XML.toJSONObject(xml);
+
+        return jsonObject.toString();
+
     }
 
 

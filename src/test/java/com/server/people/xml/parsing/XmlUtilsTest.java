@@ -20,4 +20,16 @@ public class XmlUtilsTest {
 
         System.out.println(XmlUtils.toXml(xmlParent));
     }
+
+    @Test
+    void xmlUtilsToJsonTest() throws Exception {
+        XmlHeader xmlHeader = XmlHeader.builder().mainId("TEST1").receiver("re").sender("se").build();
+        XmlBody xmlBody = XmlBody.builder().code("t1").message("TEST").build();
+
+        XmlParent xmlParent = XmlParent.builder().xmlBody(xmlBody).xmlHeader(xmlHeader).build();
+
+        String xml = XmlUtils.toXml(xmlParent);
+
+        System.out.println(XmlUtils.toJson(xml));
+    }
 }
