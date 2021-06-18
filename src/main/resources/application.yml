@@ -1,0 +1,13 @@
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL
+logging:
+  level:
+    com.server.people.xml.parsing.client.OpenAPIClient: DEBUG
+
+sample:
+  open-api:
+    name: open-api
+    url: http://openapitraffic.daejeon.go.kr/api/rest/busRouteInfo/
