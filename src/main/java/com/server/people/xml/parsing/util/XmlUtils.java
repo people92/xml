@@ -29,13 +29,14 @@ public class XmlUtils {
 
         marshaller.setProperty(Marshaller.JAXB_ENCODING, "utf-8");
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-        marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
+        //marshaller.setProperty(Marshaller.JAXB_FRAGMENT, true);
 
         StringWriter writer = new StringWriter();
 
         marshaller.marshal(obj, writer);
 
-        return writer.toString();
+
+        return writer.toString().replaceAll(" xsi:nil=\"true\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"","");
     }
 
     public static String toJson(String xml) throws Exception {

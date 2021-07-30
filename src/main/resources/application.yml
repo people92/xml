@@ -11,3 +11,4 @@ sample:
   open-api:
     name: open-api
     url: http://openapitraffic.daejeon.go.kr/api/rest/busRouteInfo/
+

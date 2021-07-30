@@ -1,6 +1,7 @@
 package com.server.people.xml.parsing;
 
 import com.server.people.xml.parsing.client.OpenAPIClient;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
+@Disabled
 public class FeignClientTest {
 
     @Autowired

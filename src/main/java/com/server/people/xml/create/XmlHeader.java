@@ -16,12 +16,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Setter
 public class XmlHeader {
 
-    @XmlElement(name = "sender")
+    @XmlElement(name = "sender", nillable = true)
     private String sender;
 
-    @XmlElement(name = "receiver")
+    @XmlElement(name = "receiver", nillable = true)
     private String receiver;
 
-    @XmlElement(name = "mainId")
+    @XmlElement(name = "mainId", nillable = true)
     private String mainId;
 }

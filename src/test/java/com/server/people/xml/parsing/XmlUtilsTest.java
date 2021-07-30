@@ -10,14 +10,13 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-@Disabled
 public class XmlUtilsTest {
 
     @Test
     void xmlUtilsToXmlTest() throws Exception{
 
         XmlHeader xmlHeader = XmlHeader.builder().mainId("TEST1").receiver("re").sender("se").build();
-        XmlBody xmlBody = XmlBody.builder().code("t1").message("TEST").build();
+        XmlBody xmlBody = XmlBody.builder().code("t1").build();
 
         XmlParent xmlParent = XmlParent.builder().xmlBody(xmlBody).xmlHeader(xmlHeader).build();
 

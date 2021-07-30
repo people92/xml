@@ -16,10 +16,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 @Setter
 public class XmlParent {
 
-    @XmlElement(name = "XmlHeader")
+    @XmlElement(name = "XmlHeader", nillable = true)
     private XmlHeader xmlHeader;
 
-    @XmlElement(name = "XmlBody")
+    @XmlElement(name = "XmlBody", nillable = true)
     private XmlBody xmlBody;
 
 
