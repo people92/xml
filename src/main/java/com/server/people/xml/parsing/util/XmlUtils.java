@@ -35,8 +35,10 @@ public class XmlUtils {
 
         marshaller.marshal(obj, writer);
 
+        String xml = writer.toString();
+        xml = xml.replaceAll(" xsi:nil=\"true\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"","");
 
-        return writer.toString().replaceAll(" xsi:nil=\"true\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"","");
+        return xml;
     }
 
     public static String toJson(String xml) throws Exception {

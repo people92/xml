@@ -1,8 +1,6 @@
 package com.server.people.xml.create;
 
 import lombok.*;
-import org.eclipse.persistence.oxm.annotations.XmlMarshalNullRepresentation;
-import org.eclipse.persistence.oxm.annotations.XmlNullPolicy;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -26,4 +24,6 @@ public class XmlBody {
 
     @XmlElement(name = "sendDate", nillable = true)
     private String sendDate;
+
+
 }
